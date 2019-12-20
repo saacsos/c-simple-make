@@ -9,3 +9,6 @@ main.o: main.c
 
 program: mylib.o main.o
 	$(CC) $(CFLAGS) -o program mylib.o main.o
+
+clean:
+	rm *.o program.exe
