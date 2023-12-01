@@ -1,7 +1,12 @@
-#ifndef MYLIB_H_
-#define MYLIB_H_
+#ifndef MYLIB_H
+#define MYLIB_H
 
-// function prototype
-unsigned int mystery(unsigned int a, unsigned int b);
+#include <stdio.h>
+#include <stdlib.h>
+
+int readInt();
+float readFloat();
+char *readStr(int size);
+void printIntArray(int[], int);
 
 #endif

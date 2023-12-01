@@ -2,16 +2,26 @@
 #include <stdlib.h>
 #include "mylib.h"
 
+int mystery(int a, int b);
+
 int main() 
 {
     puts("Enter two positive integers: ");
-    char input_x[10], input_y[10];
-    fgets(input_x, 9, stdin);
-    fgets(input_y, 9, stdin);
 
-    unsigned int x = atoi(input_x);
-    unsigned int y = atoi(input_y);
+    int x = readInt();
+    int y = readInt();
 
-    printf("The result is %u\n", mystery(x, y));
+    printf("The result is %d\n", mystery(x, y));
     return 0;
+}
+
+// What does the following program do?
+int mystery(int a, int b)
+{
+    // base case
+    if (1 >= b) {
+        return a;
+    } else { // recursive step
+        return a + mystery(a, b - 1);
+    }
 }
