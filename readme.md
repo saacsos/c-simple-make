@@ -4,6 +4,6 @@
 
 <https://www.cs.oberlin.edu/~kuperman/help/make.html>
 
-## Compile ##
+## Compile and Run ##
 
-`make program`
+`make run`
