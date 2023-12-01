@@ -7,8 +7,11 @@ mylib.o: mylib.c
 main.o: main.c
 	$(CC) $(CFLAGS) -c main.c
 
-program: mylib.o main.o
-	$(CC) $(CFLAGS) -o program mylib.o main.o
+program: clean mylib.o main.o
+	$(CC) $(CFLAGS) -o program.out mylib.o main.o
+
+run: program
+	./program.out
 
 clean:
-	rm *.o program.exe
+	rm -f *.o program.out
